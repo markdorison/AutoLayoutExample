@@ -28,10 +28,11 @@ static NSString *const MCDExampleCellIdentifier = @"ExampleCell";
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self registerTableCellNib];
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    self.objects = @[@{@"title": @"Cell1 Title"},
-                     @{@"title": @"Cell2 Title"}];
+    self.objects = @[@{@"title": @"Cell1 Title",
+                       @"detailLabelText": @"Single-line detail."},
+                     @{@"title": @"Cell2 Title",
+                       @"detailLabelText": @"Multi-line detail spanning the height of two rows."}];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,7 +45,6 @@ static NSString *const MCDExampleCellIdentifier = @"ExampleCell";
 }
 
 #pragma mark - Table View
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -57,31 +57,25 @@ static NSString *const MCDExampleCellIdentifier = @"ExampleCell";
     MCDExampleCell *cell = [tableView dequeueReusableCellWithIdentifier:MCDExampleCellIdentifier];
 
     NSDictionary *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object valueForKey:@"title"];
+    cell.cellObject = object;
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     MCDExampleCell *cell = [tableView dequeueReusableCellWithIdentifier:MCDExampleCellIdentifier];
+    NSDictionary *object = self.objects[indexPath.row];
+    cell.cellObject = object;
     [cell.contentView setNeedsLayout];
     [cell.contentView layoutIfNeeded];
     CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
 
-//    return height;
-    return 150.0f;
+    NSLog(@"Cell height: %f", height);
+    return height;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
-    }
+    return NO;
 }
 
 @end

@@ -10,4 +10,6 @@
 
 @interface MCDExampleCell : UITableViewCell
 
+@property (nonatomic, strong) NSDictionary *cellObject;
+
 @end
