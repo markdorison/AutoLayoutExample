@@ -22,6 +22,8 @@
 		93A63619189C05C1007E4D06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A635F8189C05C1007E4D06 /* UIKit.framework */; };
 		93A63621189C05C1007E4D06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93A6361F189C05C1007E4D06 /* InfoPlist.strings */; };
 		93A63623189C05C1007E4D06 /* AutoLayoutExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A63622189C05C1007E4D06 /* AutoLayoutExampleTests.m */; };
+		93A6362E189C05FF007E4D06 /* MCDExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6362D189C05FF007E4D06 /* MCDExampleCell.m */; };
+		93A63630189C060F007E4D06 /* MCDExampleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A6362F189C060F007E4D06 /* MCDExampleCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		93A6361E189C05C1007E4D06 /* AutoLayoutExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AutoLayoutExampleTests-Info.plist"; sourceTree = "<group>"; };
 		93A63620189C05C1007E4D06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		93A63622189C05C1007E4D06 /* AutoLayoutExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutExampleTests.m; sourceTree = "<group>"; };
+		93A6362C189C05FF007E4D06 /* MCDExampleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDExampleCell.h; sourceTree = "<group>"; };
+		93A6362D189C05FF007E4D06 /* MCDExampleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDExampleCell.m; sourceTree = "<group>"; };
+		93A6362F189C060F007E4D06 /* MCDExampleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDExampleCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +123,9 @@
 				93A63603189C05C1007E4D06 /* MCDAppDelegate.h */,
 				93A63604189C05C1007E4D06 /* MCDAppDelegate.m */,
 				93A63606189C05C1007E4D06 /* Main.storyboard */,
+				93A6362C189C05FF007E4D06 /* MCDExampleCell.h */,
+				93A6362D189C05FF007E4D06 /* MCDExampleCell.m */,
+				93A6362F189C060F007E4D06 /* MCDExampleCell.xib */,
 				93A63609189C05C1007E4D06 /* MCDMasterViewController.h */,
 				93A6360A189C05C1007E4D06 /* MCDMasterViewController.m */,
 				93A6360C189C05C1007E4D06 /* MCDDetailViewController.h */,
@@ -237,6 +245,7 @@
 				93A63610189C05C1007E4D06 /* Images.xcassets in Resources */,
 				93A635FF189C05C1007E4D06 /* InfoPlist.strings in Resources */,
 				93A63608189C05C1007E4D06 /* Main.storyboard in Resources */,
+				93A63630189C060F007E4D06 /* MCDExampleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +268,7 @@
 				93A63601189C05C1007E4D06 /* main.m in Sources */,
 				93A6360E189C05C1007E4D06 /* MCDDetailViewController.m in Sources */,
 				93A63605189C05C1007E4D06 /* MCDAppDelegate.m in Sources */,
+				93A6362E189C05FF007E4D06 /* MCDExampleCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
